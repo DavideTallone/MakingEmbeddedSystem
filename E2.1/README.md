@@ -11,4 +11,4 @@ When one such hotspot is detected, a ping is sent via radio to the human operato
 
 
 ## Block diagram 
-	![Uart bridge](https://github.com/DavideTallone/MakingEmbeddedSystem/E2.1/blob/main/Ex%202.1%20-MakingEmbeddedSystems.png)
+	![Uart bridge](https://github.com/DavideTallone/MakingEmbeddedSystem/blob/main/E2.1/Images/Ex%202.1%20-MakingEmbeddedSystems.png)
