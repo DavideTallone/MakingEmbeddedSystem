@@ -4,13 +4,14 @@ Discovery Board), draw the hardware block diagram for the board. For peripherals
 communication paths (SPI, I2C, etc).
 
 ## What kind of processor is it
-It is a SAMD21j18A produced by microchip, with an Arm Cortex-M0+ CPU running at up to 48 MHz.\
+It is a SAMD21j18A produced by microchip, with an Arm Cortex-M0+ CPU running at up to 48 MHz.
+
 ## How much Flash and RAM does it have? Any other memory type?
 It has 256 Kbytes of internal Flash, and 32 KBytes of internal SRAM.
 ## Does it have any special peripherals?
 It has one 2.0 USB interface that can be configured either as host or as slave.\
 I found interesting that such a tiny an low power mcu can have usb host cabability,\
-even if I plan to utilize it as slave.\
+even if I plan to utilize it as slave.
 
 As my final project need to have a time stamp functionality, the Real Time Clock, in conjunction to\
 one of the 5 16bit Timers/Counters, will sure come in handy.
