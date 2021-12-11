@@ -49,7 +49,7 @@ From the datasheet at page 780:\
 • Selectable sampling time
 
 
-## Block diagram 
-![HWDiag](E3.1/Images/BlockDiagram.png)
+## HW Block diagram 
+![HWDiag](https://github.com/DavideTallone/MakingEmbeddedSystem/blob/main/E3.1/Images/BlockDiagram.png)
 
 
