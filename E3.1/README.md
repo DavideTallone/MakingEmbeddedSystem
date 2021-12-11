@@ -3,11 +3,11 @@ Look at the documents for the board you are considering for your final project (
 Discovery Board), draw the hardware block diagram for the board. For peripherals, note the\
 communication paths (SPI, I2C, etc).
 
-# What kind of processor is it
+## What kind of processor is it
 It is a SAMD21j18A produced by microchip, with an Arm Cortex-M0+ CPU running at up to 48 MHz.\
-# How much Flash and RAM does it have? Any other memory type?
+## How much Flash and RAM does it have? Any other memory type?
 It has 256 Kbytes of internal Flash, and 32 KBytes of internal SRAM.
-#Does it have any special peripherals?
+## Does it have any special peripherals?
 It has one 2.0 USB interface that can be configured either as host or as slave.\
 I found interesting that such a tiny an low power mcu can have usb host cabability,\
 even if I plan to utilize it as slave.\
@@ -18,10 +18,10 @@ one of the 5 16bit Timers/Counters, will sure come in handy.
 I've also noticed the Event System, that, as written in the datasheet at page 388, "allows autonomous,\
 low-latency and configurable communication between peripherals".
 
-# Does it have a FPU?
+## Does it have a FPU?
 No.
 
-# If it has an ADC, what are the features?
+## If it has an ADC, what are the features?
 From the datasheet at page 780:\
 • 8-, 10- or 12-bit resolution\
 • Up to 350,000 samples per second (350ksps)\
