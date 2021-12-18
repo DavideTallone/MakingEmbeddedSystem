@@ -27,5 +27,5 @@ A new tab will be opened; There, choose the peripheral that your register belong
 ## Code
 I've uploaded the full Microchip studio solution. Source code is under\
 https://github.com/DavideTallone/MakingEmbeddedSystem/tree/main/E4/Blinky/Blinky/src
-
+## Video
 ![BlinkyGif](https://github.com/DavideTallone/MakingEmbeddedSystem/tree/main/E4/Blinky/Blinky.gif)
