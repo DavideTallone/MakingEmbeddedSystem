@@ -60,10 +60,10 @@ void configure_tc(void)
 	struct tc_config config_tc;
 	tc_get_config_defaults(&config_tc);
 	config_tc.counter_size = TC_COUNTER_SIZE_8BIT;			//8bit timer	
-	config_tc.clock_source = GCLK_GENERATOR_0;				//Timer clock derived from 1MHz main CLK
+	config_tc.clock_source = GCLK_GENERATOR_0;			//Timer clock derived from 1MHz main CLK
 
 	config_tc.clock_prescaler = TC_CLOCK_PRESCALER_DIV1024;	//prescaler divide Tclock by 1024
-	config_tc.counter_8_bit.period = 244;					//top count set to 8
+	config_tc.counter_8_bit.period = 8;			//top count set to 8
 	tc_init(&tc_instance, CONF_TC_MODULE, &config_tc);		
 	tc_enable(&tc_instance);
 	return;
