@@ -1,21 +1,29 @@
-# Exercise 2.1 Idea project diagram
-# What is this?
-It is the concept for an autonomus blimp with thermal and video sensor, for wildfires early detection and prevention.
+# Exercise 4 Blinky
+On your final project board, make blinky for yourself. Then add a button to turn the LED on and off. Bonus points for making the button cause an interrupt.\
+Triple bonus points for debouncing the button signal.
 
-## What does it do?
-It can roam in a predefined area, defined by gps coordinates, searching for hotspot in the vegetation, that could lead to a fire.\
-When one such hotspot is detected, a ping is sent via radio to the human operator that can then take direct control of the drone to better investigate the situation. 
+What are the hardware registers that cause the LED to turn on and off? (From the processor manual, don’t worry about initialization.) What are the button registers that you read? Can you read that memory directly and see the button change in a debugger or by printing out the associated memory?
 
+Turn in your code with a comment or additional file answering the questions.
 
-## Block diagram 
-![Blimp](E2.1/Images/Ex%202.1%20-MakingEmbeddedSystems.png)
+## What are the hardware registers that cause the LED to turn on and off?
+REG_PORT_DIR1, to set the direction (in my particular case, to set LED0 as output, REG_PORT_DIR1|=0x40000000)\
+REG_PORT_OUT1, to actually set the output level of the pin\
+in my case:\
+REG_PORT_OUT1 &= ~0x4000000; to set the led\
+REG_PORT_OUT1 |= 0x4000000; to clear the led
 
+REG_PORT_DIR1 memory location is 0x41004480\
+REG_PORT_OUT1 memory location is 0x41004490
 
+## What are the button registers that you read? 
+Button state is kept in REG_PORT_IN0,  15th bit (0 indexed)\
+REG_PORT_IN0 memory location is 0x41004420.
 
-# Exercise 2.2 Read mbed code, make diagram
-## What and why did you chose it?
-I've chosen the EFM32 Zero Gecko, as it has the EFM32ZG-STK3200 MCU, which is based on the same M0+ cortex as the samd21j18A that I've selected for the final project.
-Also, it was the only one in the M0+ family that I've found whith a template more complex than "blinken light" or "print a string through serial".
+## Can you read that memory directly and see the button change in a debugger or by printing out the associated memory
+Yes, to do that under the Microchip studio IDE for my board, go to Debug -> Windows -> I/O and click it.\
+A new tab will be opened; There, choose the peripheral that your register belong to (IE PORT Module for LED and BUTTON in this application)
 
-## Block diagram 
-![Blimp](E2.2/Images/Ex%202.2%20-MakingEmbeddedSystems.png)
+## Code
+I've uploaded the full Microchip studio solution. Source code is under\
+https://github.com/DavideTallone/MakingEmbeddedSystem/tree/main/E4/Blinky/Blinky/src
